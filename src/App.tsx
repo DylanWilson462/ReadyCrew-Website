@@ -37,7 +37,7 @@ function App() {
       </nav>
 
       {/* ICP Callout Bar */}
-      <div className="w-full bg-black py-2.5 text-center px-4">
+      <div className="w-full bg-[#C2410C] py-2.5 text-center px-4">
         <p className="text-white text-xs sm:text-sm font-semibold tracking-widest uppercase">
           For Trades Shop Owners Who Can't Find Skilled Techs That Actually Last
         </p>
