@@ -114,14 +114,16 @@ export default function BookCallSection() {
               />
             </div>
 
-            <motion.button
-              type="submit"
+            <motion.a
+              href="https://meta.readycrewstaffing.com/lander"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full bg-[#C2410C] text-white rounded-xl py-3.5 font-bold text-sm sm:text-base hover:bg-[#9A3412] transition-colors cursor-pointer mt-2"
+              className="block w-full bg-[#C2410C] text-white rounded-xl py-3.5 font-bold text-sm sm:text-base hover:bg-[#9A3412] transition-colors cursor-pointer mt-2 text-center no-underline"
             >
               Yes — Get Me a Truck-Ready Tech
-            </motion.button>
+            </motion.a>
 
             <p className="text-center text-xs text-[#6B7280] mt-1">
               We'll reach out within one business day to schedule your call.

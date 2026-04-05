@@ -17,12 +17,8 @@ export default function Navbar() {
   return (
     <nav className="w-full bg-white border-b border-[#E5E7EB]">
       <div className="w-full max-w-6xl mx-auto flex items-center justify-between px-6 sm:px-8 py-4">
-        <Link
-          to="/"
-          className="text-xl text-[#111827] no-underline"
-          style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
-        >
-          ReadyCrew<span className="text-[#C2410C]">.</span>
+        <Link to="/" className="no-underline">
+          <img src="/logo.png" alt="ReadyCrew Trades Placement" className="h-10 sm:h-12 w-auto" />
         </Link>
 
         {/* Desktop nav */}
@@ -41,12 +37,14 @@ export default function Navbar() {
             </Link>
           ))}
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-            <Link
-              to="/contact"
+            <a
+              href="https://meta.readycrewstaffing.com/lander"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#C2410C] text-white rounded-full px-6 py-2.5 text-sm font-semibold hover:bg-[#9A3412] transition-colors no-underline"
             >
               Book a Call
-            </Link>
+            </a>
           </motion.div>
         </div>
 
@@ -78,13 +76,15 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to="/contact"
+            <a
+              href="https://meta.readycrewstaffing.com/lander"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
               className="bg-[#C2410C] text-white rounded-full px-6 py-2.5 text-sm font-semibold text-center hover:bg-[#9A3412] transition-colors no-underline mt-1"
             >
               Book a Call
-            </Link>
+            </a>
           </div>
         </div>
       )}

@@ -11,12 +11,8 @@ export default function Footer() {
   return (
     <footer className="w-full bg-white border-t border-[#E5E7EB] py-6 sm:py-8 px-4 sm:px-6">
       <div className="w-full max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-        <Link
-          to="/"
-          className="text-base text-[#111827] no-underline"
-          style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
-        >
-          ReadyCrew Staffing<span className="text-[#C2410C]">.</span>
+        <Link to="/" className="no-underline">
+          <img src="/logo.png" alt="ReadyCrew Trades Placement" className="h-8 sm:h-10 w-auto" />
         </Link>
         <nav className="flex flex-wrap justify-center gap-4 sm:gap-6">
           {footerLinks.map((link) => (
@@ -30,7 +26,7 @@ export default function Footer() {
           ))}
         </nav>
         <span className="text-xs sm:text-sm text-[#6B7280]">
-          &copy; 2025 ReadyCrew Staffing. All rights reserved.
+          &copy; 2025 ReadyCrew Trades Placement. All rights reserved.
         </span>
       </div>
     </footer>

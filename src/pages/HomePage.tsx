@@ -40,13 +40,16 @@ export default function HomePage() {
           </p>
 
           <div>
-            <motion.button
+            <motion.a
+              href="https://meta.readycrewstaffing.com/lander"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="bg-[#C2410C] text-white rounded-full px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base font-semibold hover:bg-[#9A3412] shadow-lg cursor-pointer"
+              className="inline-block bg-[#C2410C] text-white rounded-full px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base font-semibold hover:bg-[#9A3412] shadow-lg cursor-pointer no-underline"
             >
               Yes — Get Me a Truck-Ready Tech
-            </motion.button>
+            </motion.a>
 
             <div className="flex items-center justify-center gap-1.5 mt-3">
               <ShieldCheck size={14} className="text-[#C2410C]" />

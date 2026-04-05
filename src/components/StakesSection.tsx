@@ -106,13 +106,16 @@ export default function StakesSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-10 sm:mt-16"
         >
-          <motion.button
+          <motion.a
+            href="https://meta.readycrewstaffing.com/lander"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-[#C2410C] text-white rounded-full px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-sm sm:text-base hover:bg-[#9A3412] transition-colors cursor-pointer"
+            className="inline-block bg-[#C2410C] text-white rounded-full px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-sm sm:text-base hover:bg-[#9A3412] transition-colors cursor-pointer no-underline"
           >
             Book Your Free Call Now
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </section>

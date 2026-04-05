@@ -104,12 +104,14 @@ function JobCard({ job }: { job: (typeof openings)[number] }) {
               </div>
             ))}
           </div>
-          <Link
-            to="/contact"
+          <a
+            href="https://meta.readycrewstaffing.com/lander"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-[#C2410C] text-white rounded-full px-6 py-2.5 text-sm font-semibold hover:bg-[#9A3412] transition-colors no-underline"
           >
             Apply Now
-          </Link>
+          </a>
         </div>
       )}
     </div>
@@ -258,12 +260,14 @@ export default function HiringPage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-center mt-10 sm:mt-12"
           >
-            <Link
-              to="/contact"
+            <a
+              href="https://meta.readycrewstaffing.com/lander"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-[#C2410C] text-white rounded-full px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base font-semibold hover:bg-[#9A3412] shadow-lg transition-colors no-underline"
             >
               Get Started — Talk to Us
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>

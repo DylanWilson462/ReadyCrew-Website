@@ -27,16 +27,19 @@ export default function CallToActionSection() {
           Book your free Placement Strategy Call today. Twenty minutes from now, you'll know exactly what your next hire looks like and when they'll be starting.
         </motion.p>
 
-        <motion.button
+        <motion.a
+          href="https://meta.readycrewstaffing.com/lander"
+          target="_blank"
+          rel="noopener noreferrer"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="bg-white text-[#C2410C] rounded-full px-8 sm:px-12 py-3.5 sm:py-4 text-sm sm:text-base font-bold hover:bg-white/90 shadow-xl cursor-pointer"
+          className="inline-block bg-white text-[#C2410C] rounded-full px-8 sm:px-12 py-3.5 sm:py-4 text-sm sm:text-base font-bold hover:bg-white/90 shadow-xl cursor-pointer no-underline"
         >
           Yes — Get Me a Truck-Ready Tech
-        </motion.button>
+        </motion.a>
 
         <motion.p
           initial={{ opacity: 0 }}
