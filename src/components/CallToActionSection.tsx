@@ -6,13 +6,13 @@ export default function CallToActionSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section ref={ref} className="bg-[#C2410C] py-20 px-6">
-      <div className="max-w-4xl mx-auto text-center">
+    <section ref={ref} className="w-full bg-[#C2410C] py-16 sm:py-20 px-4 sm:px-6">
+      <div className="w-full max-w-4xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-6xl text-white leading-tight mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6"
           style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
         >
           Your trucks shouldn't sit empty another week.
@@ -22,7 +22,7 @@ export default function CallToActionSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10"
+          className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8 sm:mb-10"
         >
           Book your free Placement Strategy Call today. Twenty minutes from now, you'll know exactly what your next hire looks like and when they'll be starting.
         </motion.p>
@@ -33,7 +33,7 @@ export default function CallToActionSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="bg-white text-[#C2410C] rounded-full px-12 py-4 text-base font-bold hover:bg-white/90 shadow-xl cursor-pointer"
+          className="bg-white text-[#C2410C] rounded-full px-8 sm:px-12 py-3.5 sm:py-4 text-sm sm:text-base font-bold hover:bg-white/90 shadow-xl cursor-pointer"
         >
           Yes — Get Me a Truck-Ready Tech
         </motion.button>

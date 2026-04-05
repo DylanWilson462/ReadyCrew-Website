@@ -23,8 +23,8 @@ export default function StakesSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section ref={ref} className="bg-white py-28 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="w-full bg-white py-16 sm:py-20 md:py-28 px-4 sm:px-6">
+      <div className="w-full max-w-6xl mx-auto">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -38,24 +38,24 @@ export default function StakesSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl text-[#111827] mb-16 text-center"
+          className="text-3xl sm:text-4xl md:text-5xl text-[#111827] mb-10 sm:mb-16 text-center"
           style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
         >
           Two paths. One decision.
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {/* Failure path */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="rounded-3xl p-10 bg-[#F9FAFB] border border-[#E5E7EB]"
+            className="rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 bg-[#F9FAFB] border border-[#E5E7EB]"
           >
-            <div className="flex items-center gap-3 mb-0">
-              <XCircle size={24} className="text-[#6B7280] opacity-50" />
+            <div className="flex items-center gap-3">
+              <XCircle size={24} className="text-[#6B7280] opacity-50 shrink-0" />
               <span
-                className="text-2xl text-[#111827]/50"
+                className="text-xl sm:text-2xl text-[#111827]/50"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
               >
                 If nothing changes
@@ -77,12 +77,12 @@ export default function StakesSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="rounded-3xl p-10 bg-[#C2410C]/5 border border-[#C2410C]/20"
+            className="rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 bg-[#C2410C]/5 border border-[#C2410C]/20"
           >
-            <div className="flex items-center gap-3 mb-0">
-              <CheckCircle size={24} className="text-[#C2410C]" />
+            <div className="flex items-center gap-3">
+              <CheckCircle size={24} className="text-[#C2410C] shrink-0" />
               <span
-                className="text-2xl text-[#111827]"
+                className="text-xl sm:text-2xl text-[#111827]"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
               >
                 With ReadyCrew
@@ -104,12 +104,12 @@ export default function StakesSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-16"
+          className="text-center mt-10 sm:mt-16"
         >
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-[#C2410C] text-white rounded-full px-10 py-4 font-bold text-base hover:bg-[#9A3412] transition-colors cursor-pointer"
+            className="bg-[#C2410C] text-white rounded-full px-8 sm:px-10 py-3.5 sm:py-4 font-bold text-sm sm:text-base hover:bg-[#9A3412] transition-colors cursor-pointer"
           >
             Book Your Free Call Now
           </motion.button>

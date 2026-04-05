@@ -20,8 +20,8 @@ export default function GuideSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section ref={ref} className="bg-[#111827] py-28 px-6">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section ref={ref} className="w-full bg-[#111827] py-16 sm:py-20 md:py-28 px-4 sm:px-6">
+      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
         {/* Left column */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -32,7 +32,7 @@ export default function GuideSection() {
             WHY READYCREW
           </p>
           <h2
-            className="text-4xl md:text-5xl text-white leading-tight mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl text-white leading-tight mb-6"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
           >
             We know what a real trade tech looks like.
@@ -58,20 +58,20 @@ export default function GuideSection() {
           initial={{ opacity: 0, x: 40 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="rounded-3xl bg-[#C2410C]/10 border border-[#C2410C]/30 p-10"
+          className="rounded-3xl bg-[#C2410C]/10 border border-[#C2410C]/30 p-6 sm:p-8 md:p-10"
         >
           <p
-            className="text-2xl md:text-3xl text-white leading-snug mb-6"
+            className="text-xl sm:text-2xl md:text-3xl text-white leading-snug mb-6"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
           >
             "The right tech exists. You just haven't had the right system to find them."
           </p>
-          <div className="w-full h-px bg-white/10 mt-6 pt-0" />
+          <div className="w-full h-px bg-white/10" />
           <div className="flex flex-col gap-6 mt-6">
             {stats.map((stat) => (
               <div key={stat.label}>
                 <span
-                  className="text-4xl text-[#C2410C]"
+                  className="text-3xl sm:text-4xl text-[#C2410C]"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
                 >
                   {stat.number}

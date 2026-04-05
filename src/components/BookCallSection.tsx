@@ -14,8 +14,8 @@ export default function BookCallSection() {
   const [form, setForm] = useState({ name: '', email: '', trucks: '', city: '' })
 
   return (
-    <section ref={ref} className="bg-[#111827] py-28 px-6">
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section ref={ref} className="w-full bg-[#111827] py-16 sm:py-20 md:py-28 px-4 sm:px-6">
+      <div className="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
         {/* Left column */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -26,12 +26,12 @@ export default function BookCallSection() {
             GET STARTED
           </p>
           <h2
-            className="text-4xl md:text-5xl text-white leading-tight mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl text-white leading-tight mb-6"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
           >
             Book your Placement Strategy Call.
           </h2>
-          <p className="text-base text-white/60 leading-relaxed mb-8">
+          <p className="text-sm sm:text-base text-white/60 leading-relaxed mb-8">
             Twenty minutes. We'll tell you exactly what kind of tech we'd source for your shop, what the timeline looks like, and whether we're the right fit. No pitch. No pressure.
           </p>
           <div className="flex flex-col gap-3">
@@ -49,10 +49,10 @@ export default function BookCallSection() {
           initial={{ opacity: 0, x: 40 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-white rounded-3xl p-8 shadow-2xl"
+          className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl"
         >
           <h3
-            className="text-2xl text-[#111827] mb-6"
+            className="text-xl sm:text-2xl text-[#111827] mb-6"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
           >
             Tell us about your shop
@@ -118,7 +118,7 @@ export default function BookCallSection() {
               type="submit"
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full bg-[#C2410C] text-white rounded-xl py-3.5 font-bold text-base hover:bg-[#9A3412] transition-colors cursor-pointer mt-2"
+              className="w-full bg-[#C2410C] text-white rounded-xl py-3.5 font-bold text-sm sm:text-base hover:bg-[#9A3412] transition-colors cursor-pointer mt-2"
             >
               Yes — Get Me a Truck-Ready Tech
             </motion.button>

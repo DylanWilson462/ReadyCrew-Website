@@ -16,10 +16,10 @@ const trustBadges = [
 
 function App() {
   return (
-    <div className="bg-white min-h-screen flex flex-col">
+    <div className="w-full bg-white">
       {/* Navbar */}
-      <nav className="bg-white border-b border-[#E5E7EB] px-8 py-4">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
+      <nav className="w-full bg-white border-b border-[#E5E7EB]">
+        <div className="w-full max-w-6xl mx-auto flex items-center justify-between px-6 sm:px-8 py-4">
           <span
             className="text-xl text-[#111827]"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
@@ -29,7 +29,7 @@ function App() {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-[#C2410C] text-white rounded-full px-6 py-2.5 text-sm font-semibold hover:bg-[#9A3412] transition-colors cursor-pointer"
+            className="bg-[#C2410C] text-white rounded-full px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold hover:bg-[#9A3412] transition-colors cursor-pointer"
           >
             Book a Placement Strategy Call
           </motion.button>
@@ -37,51 +37,53 @@ function App() {
       </nav>
 
       {/* ICP Callout Bar */}
-      <div className="bg-[#C2410C] py-2.5 text-center">
-        <p className="text-white text-sm font-semibold tracking-widest uppercase">
+      <div className="w-full bg-[#C2410C] py-2.5 text-center px-4">
+        <p className="text-white text-xs sm:text-sm font-semibold tracking-widest uppercase">
           For Trades Shop Owners Who Can't Find Skilled Techs That Actually Last
         </p>
       </div>
 
       {/* Hero */}
-      <section className="flex-1 flex flex-col justify-center max-w-4xl mx-auto text-center px-6 pt-16 pb-20">
-        <h1
-          className="text-5xl md:text-6xl lg:text-7xl text-[#111827] tracking-tight leading-none mb-6"
-          style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
-        >
-          Your Next <span className="text-[#C2410C]">Truck-Ready</span> Tech.
-          <br />
-          Placed In 14 Days.
-        </h1>
-
-        <p className="text-lg md:text-xl text-[#6B7280] leading-relaxed max-w-2xl mx-auto mb-10">
-          We find, screen, and place skilled service techs who show up, run calls solo from day one, and stay — or you don't pay.
-        </p>
-
-        <div>
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="bg-[#C2410C] text-white rounded-full px-10 py-4 text-base font-semibold hover:bg-[#9A3412] shadow-lg cursor-pointer"
+      <section className="w-full min-h-[80vh] flex flex-col justify-center items-center py-16 sm:py-20 px-4 sm:px-6">
+        <div className="w-full max-w-4xl mx-auto text-center">
+          <h1
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#111827] tracking-tight leading-none mb-6"
+            style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
           >
-            Yes — Get Me a Truck-Ready Tech
-          </motion.button>
+            Your Next <span className="text-[#C2410C]">Truck-Ready</span> Tech.
+            <br />
+            Placed In 14 Days.
+          </h1>
 
-          <div className="flex items-center justify-center gap-1.5 mt-3">
-            <ShieldCheck size={14} className="text-[#C2410C]" />
-            <span className="text-sm text-[#6B7280]">Free 20-minute call. No commitment.</span>
-          </div>
-        </div>
+          <p className="text-base sm:text-lg md:text-xl text-[#6B7280] leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10">
+            We find, screen, and place skilled service techs who show up, run calls solo from day one, and stay — or you don't pay.
+          </p>
 
-        {/* Trust badges */}
-        <div className="flex flex-col sm:flex-row gap-8 justify-center mt-12 pt-12 border-t border-[#E5E7EB]">
-          {trustBadges.map((badge) => (
-            <div key={badge.label} className="flex flex-col items-center gap-1">
-              <badge.icon size={20} className="text-[#C2410C] mb-1" />
-              <span className="text-sm text-[#111827] font-semibold">{badge.label}</span>
-              <span className="text-xs text-[#6B7280]">{badge.sub}</span>
+          <div>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-[#C2410C] text-white rounded-full px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base font-semibold hover:bg-[#9A3412] shadow-lg cursor-pointer"
+            >
+              Yes — Get Me a Truck-Ready Tech
+            </motion.button>
+
+            <div className="flex items-center justify-center gap-1.5 mt-3">
+              <ShieldCheck size={14} className="text-[#C2410C]" />
+              <span className="text-sm text-[#6B7280]">Free 20-minute call. No commitment.</span>
             </div>
-          ))}
+          </div>
+
+          {/* Trust badges */}
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center mt-10 sm:mt-12 pt-10 sm:pt-12 border-t border-[#E5E7EB]">
+            {trustBadges.map((badge) => (
+              <div key={badge.label} className="flex flex-col items-center gap-1">
+                <badge.icon size={20} className="text-[#C2410C] mb-1" />
+                <span className="text-sm text-[#111827] font-semibold">{badge.label}</span>
+                <span className="text-xs text-[#6B7280]">{badge.sub}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

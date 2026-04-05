@@ -31,13 +31,13 @@ export default function PlanSection() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section ref={ref} className="bg-white py-28 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="w-full bg-white py-16 sm:py-20 md:py-28 px-4 sm:px-6">
+      <div className="w-full max-w-6xl mx-auto">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-xs tracking-widest uppercase text-[#C2410C] font-semibold mb-4"
+          className="text-xs tracking-widest uppercase text-[#C2410C] font-semibold mb-4 text-center md:text-left"
         >
           THE PLAN
         </motion.p>
@@ -46,7 +46,7 @@ export default function PlanSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl text-[#111827] mb-4 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl text-[#111827] mb-4 leading-tight text-center md:text-left"
           style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
         >
           <span className="text-[#C2410C]">Three</span> steps to your next great hire.
@@ -56,7 +56,7 @@ export default function PlanSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-lg text-[#6B7280] mb-16"
+          className="text-base sm:text-lg text-[#6B7280] mb-12 sm:mb-16 text-center md:text-left"
         >
           No long contracts. No stacks of resumes. No guessing.
         </motion.p>
@@ -68,27 +68,27 @@ export default function PlanSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: i * 0.2 }}
-              className={`flex flex-row gap-8 items-start py-12 ${
+              className={`flex flex-col sm:flex-row gap-4 sm:gap-8 items-start py-8 sm:py-12 ${
                 i < steps.length - 1 ? 'border-b border-[#E5E7EB]' : ''
               }`}
             >
               <span
-                className="text-8xl text-[#111827] opacity-[0.06] leading-none w-24 shrink-0 hidden md:block"
+                className="text-6xl sm:text-8xl text-[#111827] opacity-[0.06] leading-none w-16 sm:w-24 shrink-0 hidden md:block"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
               >
                 {step.num}
               </span>
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <p className="text-xs tracking-widest uppercase text-[#C2410C] font-semibold mb-2">
                   {step.label}
                 </p>
                 <h3
-                  className="text-2xl md:text-3xl text-[#111827] mb-3"
+                  className="text-xl sm:text-2xl md:text-3xl text-[#111827] mb-3"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800 }}
                 >
                   {step.title}
                 </h3>
-                <p className="text-base text-[#6B7280] leading-relaxed max-w-lg">
+                <p className="text-sm sm:text-base text-[#6B7280] leading-relaxed max-w-lg">
                   {step.desc}
                 </p>
               </div>
