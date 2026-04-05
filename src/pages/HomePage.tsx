@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ShieldCheck, CheckCircle, Shield, Star } from 'lucide-react'
+import useSEO from '../hooks/useSEO'
 import ProblemSection from '../components/ProblemSection'
 import GuideSection from '../components/GuideSection'
 import PlanSection from '../components/PlanSection'
@@ -14,6 +15,11 @@ const trustBadges = [
 ]
 
 export default function HomePage() {
+  useSEO(
+    'Truck-Ready Techs, Placed in 14 Days',
+    'ReadyCrew Trades Placement finds, screens, and places skilled service techs who show up, run calls solo from day one, and stay — or you don\'t pay.'
+  )
+
   return (
     <>
       {/* ICP Callout Bar */}

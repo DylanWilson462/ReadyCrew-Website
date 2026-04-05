@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Target, Users, Wrench, Heart } from 'lucide-react'
+import useSEO from '../hooks/useSEO'
 
 const values = [
   {
@@ -26,6 +27,11 @@ const values = [
 ]
 
 export default function AboutPage() {
+  useSEO(
+    'About Us',
+    'ReadyCrew Trades Placement was built for the trades industry. We place skilled service techs who are certified, experienced, and ready to run solo calls from day one.'
+  )
+
   const heroRef = useRef(null)
   const heroInView = useInView(heroRef, { once: true, margin: '-50px' })
   const valuesRef = useRef(null)

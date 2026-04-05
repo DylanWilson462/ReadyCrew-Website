@@ -2,6 +2,7 @@ import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { Briefcase, MapPin, Clock, ChevronDown, ChevronUp, CheckCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import useSEO from '../hooks/useSEO'
 
 const openings = [
   {
@@ -119,6 +120,11 @@ function JobCard({ job }: { job: (typeof openings)[number] }) {
 }
 
 export default function HiringPage() {
+  useSEO(
+    'Hiring — Careers for Skilled Techs',
+    'Looking for your next trades job? ReadyCrew connects experienced HVAC, plumbing, and electrical techs with shops that value their people.'
+  )
+
   const heroRef = useRef(null)
   const heroInView = useInView(heroRef, { once: true, margin: '-50px' })
   const jobsRef = useRef(null)

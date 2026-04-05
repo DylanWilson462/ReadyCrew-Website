@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { Mail, Phone, MapPin, ChevronDown, CheckCircle } from 'lucide-react'
+import useSEO from '../hooks/useSEO'
 
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'hello@readycrewstaffing.com' },
@@ -9,6 +10,11 @@ const contactInfo = [
 ]
 
 export default function ContactPage() {
+  useSEO(
+    'Contact Us',
+    'Get in touch with ReadyCrew Trades Placement. Whether you\'re a shop owner looking for techs or a skilled tradesperson looking for work — we\'re here to help.'
+  )
+
   const heroRef = useRef(null)
   const heroInView = useInView(heroRef, { once: true, margin: '-50px' })
   const formRef = useRef(null)
